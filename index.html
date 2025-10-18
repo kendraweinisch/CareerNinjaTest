@@ -5,24 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Primary Meta Tags -->
-    <title>Executive Encore Career Services | CareerNinja - C-Suite Transition Coaching</title>
-    <meta name="description" content="CareerNinja provides encore career services for executives transitioning to fractional roles, board positions, and meaningful post-career work. Expert C-suite coaching.">
+    <title>CareerNinja - C-Suite Transition & Legacy Building</title>
+    <meta name="description" content="CareerNinja provides encore career services for executives transitioning to fractional roles, board positions, and meaningful post-career work. Build your legacy.">
     <meta name="keywords" content="encore career, executive coaching, fractional executive, board positions, career transition, C-suite coaching, executive retirement, unretirement, part-time CXO, board service, career ninja">
     <meta name="author" content="Kendra Weinisch - CareerNinja">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     
     <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Executive Encore Career Services | CareerNinja">
-    <meta property="og:description" content="Transform your executive success into purpose-driven impact with CareerNinja's encore career coaching and fractional executive placement.">
+    <meta property="og:title" content="CareerNinja - Your Legacy Isn't Behind You">
+    <meta property="og:description" content="Transform your executive success into purpose-driven impact with CareerNinja's encore career services and legacy building.">
     <meta property="og:image" content="https://yourcareerninja.com/public/images/hero-executive.jpg">
     <meta property="og:url" content="https://yourcareerninja.com">
     <meta property="og:site_name" content="CareerNinja">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Executive Encore Career Services | CareerNinja">
-    <meta name="twitter:description" content="C-suite transition coaching for fractional roles, board positions, and meaningful encore careers.">
+    <meta name="twitter:title" content="CareerNinja - Your Legacy Isn't Behind You">
+    <meta name="twitter:description" content="C-suite transition services for fractional roles, board positions, and meaningful encore careers.">
     <meta name="twitter:image" content="https://yourcareerninja.com/public/images/hero-executive.jpg">
     
     <!-- Canonical URL -->
@@ -274,10 +274,11 @@
         
         /* Hero Section */
         .hero {
-            padding: 10rem 0 5rem;
+            padding: 10rem 0 8rem;
             background: linear-gradient(rgba(26, 82, 118, 0.85), rgba(14, 46, 68, 0.9)), url('public/images/hero-executive.jpg');
             background-size: cover;
             background-position: center;
+            background-repeat: no-repeat;
             color: white;
             text-align: center;
             position: relative;
@@ -339,52 +340,68 @@
         }
         
         .author-badge {
-            display: inline-flex;
+            display: flex;
             align-items: center;
+            justify-content: center;
             background: rgba(255, 255, 255, 0.25);
-            padding: 2rem;
+            padding: 3rem;
             border-radius: 16px;
-            margin-top: 3rem;
+            margin-top: 4rem;
             backdrop-filter: blur(15px);
             border: 1px solid rgba(255, 255, 255, 0.2);
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-            max-width: 500px;
+            max-width: 100%;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
 
         .author-badge:hover {
             transform: translateY(-5px);
             box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
         }
+
+        .author-badge::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--secondary), var(--primary));
+        }
         
         .author-badge img {
-            width: 90px;
-            height: 90px;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
             object-fit: cover;
-            margin-right: 1.5rem;
+            margin-right: 2rem;
             border: 3px solid white;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
 
         .author-badge-content {
             text-align: left;
+            flex: 1;
         }
 
         .author-badge-content p {
             margin-bottom: 0.5rem;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             line-height: 1.5;
         }
 
         .author-badge-content strong {
             color: white;
             font-weight: 700;
-            font-size: 1.2rem;
+            font-size: 1.4rem;
+            display: block;
+            margin-bottom: 0.5rem;
         }
 
         .author-badge-content small {
-            font-size: 0.95rem;
+            font-size: 1.1rem;
             opacity: 0.9;
             line-height: 1.4;
         }
@@ -1168,16 +1185,25 @@
             .author-badge {
                 flex-direction: column;
                 text-align: center;
-                padding: 1.5rem;
+                padding: 2rem;
+                margin-top: 3rem;
             }
 
             .author-badge img {
                 margin-right: 0;
-                margin-bottom: 1rem;
+                margin-bottom: 1.5rem;
+                width: 90px;
+                height: 90px;
             }
 
             .author-badge-content {
                 text-align: center;
+            }
+
+            .author-badge-content p,
+            .author-badge-content strong,
+            .author-badge-content small {
+                font-size: 1.1rem;
             }
         }
         
@@ -1208,11 +1234,11 @@
             
             <nav id="nav" aria-label="Main navigation">
                 <ul>
-                    <li><a href="#services">Executive Services</a></li>
+                    <li><a href="#services">Services</a></li>
                     <li><a href="#process">The Process</a></li>
                     <li><a href="#book">Encore Executive Book</a></li>
                     <li><a href="#faq">FAQ</a></li>
-                    <li><a href="#" id="contact-link">Contact Coach</a></li>
+                    <li><a href="#" id="contact-link">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -1222,18 +1248,18 @@
     <section class="hero" id="main-content" tabindex="-1">
         <div class="container">
             <div class="hero-content">
-                <h1>Executive Encore Career Transition Services</h1>
+                <h1>Your Legacy Isn't Behind You. It's What You Do Next.</h1>
                 <p>CareerNinja helps accomplished C-suite leaders transform corporate success into meaningful fractional roles, board positions, and purpose-driven encore careers.</p>
                 <div>
-                    <a href="#" class="btn" id="strategy-session-button">Schedule Executive Strategy Session</a>
-                    <a href="#services" class="btn btn-outline">Explore C-Suite Services</a>
+                    <a href="#" class="btn" id="strategy-session-button">Schedule Strategy Session</a>
+                    <a href="#services" class="btn btn-outline">Explore Services</a>
                 </div>
                 
                 <div class="author-badge">
-                    <img src="public/images/author-photo.jpg" alt="Kendra Weinisch - Executive Career Coach and Founder of CareerNinja" width="90" height="90">
+                    <img src="public/images/author-photo.jpg" alt="Kendra Weinisch - CareerNinja Founder" width="100" height="100">
                     <div class="author-badge-content">
                         <p>Author of the upcoming book:</p>
-                        <p><strong>"The Encore Executive"</strong></p>
+                        <strong>"The Encore Executive"</strong>
                         <small>Redefining Retirement, Unretirement, and Part-Time C-Suite Leadership</small>
                     </div>
                 </div>
@@ -1241,24 +1267,21 @@
         </div>
     </section>
 
-    <!-- Rest of your HTML content remains exactly the same -->
     <!-- Problem Section -->
     <section id="problem">
         <div class="container">
             <div class="section-title">
-                <h2>The C-Suite Executive Transition Challenge</h2>
+                <h2>The C-Suite Transition Challenge</h2>
             </div>
             <div class="problem-content">
-                <p>After decades climbing the corporate ladder and achieving C-suite success, many executives face a critical crossroads. The traditional retirement model no longer fits today's longer, healthier lifespans and the desire for continued impact.</p>
-                <p>Yet the transition from full-time executive leadership to fractional roles, board positions, or purpose-driven encore careers presents unique challenges:</p>
+                <p>After decades climbing the corporate ladder and achieving C-suite success, many leaders face the pivotal question: "What's next?" The transition from traditional corporate leadership to meaningful encore careers presents unique challenges:</p>
                 <ul>
-                    <li><strong>Identity Disruption:</strong> Moving from "who I was" to "who I'm becoming" after decades in high-stakes leadership roles</li>
-                    <li><strong>Network Limitations:</strong> Corporate networks often don't connect to fractional, board, or encore career opportunities</li>
-                    <li><strong>Pricing Complexity:</strong> Determining appropriate compensation for fractional, advisory, or project-based work</li>
-                    <li><strong>Portfolio Career Design:</strong> Structuring a mix of paid, pro bono, and personal pursuits that provides both income and meaning</li>
-                    <li><strong>Legacy Building:</strong> Translating decades of experience into lasting impact beyond traditional retirement</li>
+                    <li><strong>Skill Translation Uncertainty:</strong> How to leverage corporate leadership experience for board roles, advisory positions, and fractional work</li>
+                    <li><strong>Purpose Alignment:</strong> Identifying opportunities that align with personal values, expertise, and desired impact</li>
+                    <li><strong>Flexible Leadership Landscape:</strong> Navigating the growing markets for part-time CXO roles and project-based leadership</li>
+                    <li><strong>Financial Sustainability:</strong> Balancing meaningful work with financial requirements during transition</li>
+                    <li><strong>Portfolio Career Management:</strong> Creating sustainable models combining board service, advisory work, and personal fulfillment</li>
                 </ul>
-                <p>CareerNinja provides the specialized coaching, connections, and strategy that C-suite executives need to navigate this complex transition successfully.</p>
             </div>
         </div>
     </section>
@@ -1267,96 +1290,111 @@
     <section id="services">
         <div class="container">
             <div class="section-title">
-                <h2>Executive Encore Career Services</h2>
+                <h2>Encore Career Services</h2>
+                <p>Specialized programs designed for C-suite leaders transitioning to fractional roles, board positions, and meaningful encore careers</p>
             </div>
             <div class="services-grid">
-                <!-- Service 1 -->
+                <!-- Introductory Chat -->
                 <div class="service-card">
                     <div class="service-image">
-                        <div class="service-badge">Most Popular</div>
-                        <span>Executive Encore Strategy Session</span>
+                        <i class="fas fa-comments fa-3x" style="color: #1a5276;"></i>
+                        <div class="service-badge">COMPLIMENTARY</div>
                     </div>
                     <div class="service-content">
-                        <h3>Executive Encore Strategy Session</h3>
-                        <div class="service-duration">15-minute complimentary session</div>
+                        <h3>Encore Strategy Session</h3>
+                        <div class="service-duration">15 minutes</div>
+                        <p>Discover how transition services can transform your corporate expertise into purposeful impact.</p>
                         <ul class="service-features">
-                            <li>Clarify your encore career vision and goals</li>
-                            <li>Identify potential transition pathways</li>
-                            <li>Receive personalized recommendations</li>
-                            <li>Explore if CareerNinja coaching is right for you</li>
+                            <li>Personalized encore career assessment</li>
+                            <li>Identification of optimal transition pathways</li>
+                            <li>Customized action plan outline</li>
+                            <li>No sales pitch - just expert guidance</li>
                         </ul>
-                        <div class="service-price">COMPLIMENTARY</div>
+                        <div class="service-price">$0</div>
                         <div class="service-cta">
-                            <a href="#" class="btn" data-service="Strategy Session">Schedule Now</a>
+                            <a href="#" class="btn encore-strategy-button">BOOK NOW</a>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Service 2 -->
+                <!-- Hourly Rates -->
                 <div class="service-card">
                     <div class="service-image">
-                        <span>Executive Career Coaching</span>
+                        <i class="fas fa-clock fa-3x" style="color: #1a5276;"></i>
                     </div>
                     <div class="service-content">
-                        <h3>Executive Career Coaching</h3>
-                        <div class="service-duration">À la carte sessions</div>
+                        <h3>Career Services</h3>
+                        <div class="service-duration">60 minutes</div>
+                        <p>À la carte career services for targeted support during your transition.</p>
                         <ul class="service-features">
-                            <li>Personalized coaching for specific transition challenges</li>
-                            <li>Fractional role negotiation strategies</li>
-                            <li>Board positioning and search support</li>
-                            <li>Portfolio career design and implementation</li>
+                            <li>Personalized career transition roadmap</li>
+                            <li>Executive resume and LinkedIn optimization</li>
+                            <li>Interview preparation and negotiation strategy</li>
+                            <li>Career clarity and purpose alignment session</li>
+                            <li>Flexible, focused, and actionable guidance</li>
                         </ul>
-                        <div class="service-price">$450/SESSION</div>
+                        <div class="service-price">$200</div>
                         <div class="service-cta">
-                            <a href="#" class="btn" data-service="Executive Coaching">Book Session</a>
+                            <a href="https://calendly.com/kendraweinisch/executivecareercoaching" class="btn" target="_blank" rel="noopener noreferrer">BOOK NOW</a>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Service 3 -->
+                <!-- Fractional Executive Launch -->
                 <div class="service-card">
                     <div class="service-image">
-                        <span>Executive Encore Blueprint</span>
+                        <i class="fas fa-briefcase fa-3x" style="color: #1a5276;"></i>
+                        <div class="service-badge">MOST POPULAR</div>
                     </div>
                     <div class="service-content">
-                        <h3>Executive Encore Blueprint</h3>
-                        <div class="service-duration">3-month intensive program</div>
+                        <h3>Fractional Launch Program</h3>
+                        <div class="service-duration">4-week intensive program</div>
+                        <p>Position yourself as a top-tier "rent-a-CXO" for startups and growing organizations.</p>
                         <ul class="service-features">
-                            <li>Comprehensive encore career assessment</li>
-                            <li>Personalized transition roadmap</li>
-                            <li>Board-ready positioning package</li>
-                            <li>Fractional role search strategy</li>
-                            <li>Ongoing coaching and accountability</li>
+                            <li>Positioning strategy development</li>
+                            <li>Premium application materials portfolio</li>
+                            <li>Industry-specific networking scripts & outreach system</li>
+                            <li>Client contract templates & negotiation playbook</li>
+                            <li>Branding package (LinkedIn, bio, pitch)</li>
+                            <li>Direct introduction to our partner network</li>
                         </ul>
-                        <div class="service-price">$7,500</div>
+                        <div class="service-price">$5,000</div>
                         <div class="service-cta">
-                            <a href="#" class="btn" data-service="Encore Blueprint">Learn More</a>
+                            <a href="https://calendly.com/kendraweinisch/fractionalexecutivelaunch" class="btn" target="_blank" rel="noopener noreferrer">BOOK NOW</a>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Service 4 -->
+                <!-- Board-Ready Accelerator -->
                 <div class="service-card">
                     <div class="service-image">
-                        <div class="service-badge">New</div>
-                        <span>Board Placement Program</span>
+                        <i class="fas fa-chalkboard-teacher fa-3x" style="color: #1a5276;"></i>
+                        <div class="service-badge">PREMIUM</div>
                     </div>
                     <div class="service-content">
-                        <h3>Board Placement Program</h3>
-                        <div class="service-duration">6-month placement program</div>
+                        <h3>Board-Ready Accelerator Program</h3>
+                        <div class="service-duration">6-week comprehensive program</div>
+                        <p>Fast-track your journey to influential corporate and nonprofit board positions.</p>
                         <ul class="service-features">
-                            <li>Board readiness assessment</li>
-                            <li>Board bio and resume development</li>
-                            <li>Targeted board search strategy</li>
-                            <li>Interview preparation and coaching</li>
-                            <li>Direct introductions to board opportunities</li>
+                           <li> <a href="https://www.nacdonline.org/" target="_blank" rel="noopener noreferrer">NACD Directorship Certification preparation</a></li>
+                            <li>Complete Director Portfolio development</li>
+                            <li>LinkedIn profile transformation</li>
+                            <li>Board-specific resume and bio creation</li>
+                            <li>Three simulated board interview sessions</li>
+                            <li>Board search strategy and networking plan</li>
+                            <li>Access to exclusive board opportunity network</li>
                         </ul>
-                        <div class="service-price">$12,000</div>
+                        <div class="service-price">$7,000</div>
                         <div class="service-cta">
-                            <a href="#" class="btn" data-service="Board Placement">Explore Program</a>
+                            <a href="https://calendly.com/kendraweinisch/board-ready-accelerator" class="btn" target="_blank" rel="noopener noreferrer">BOOK NOW</a>
                         </div>
                     </div>
                 </div>
+            </div>
+            
+            <div class="calendly-info">
+                <i class="fas fa-calendar-check"></i>
+                <p><strong>Secure Booking:</strong> All scheduling and payment processing handled securely through Calendly with enterprise-grade security.</p>
             </div>
         </div>
     </section>
@@ -1365,33 +1403,28 @@
     <section id="process">
         <div class="container">
             <div class="section-title">
-                <h2>The CareerNinja Executive Transition Process</h2>
+                <h2>The Transition Process</h2>
             </div>
             <div class="process-steps">
                 <div class="step">
                     <div class="step-number">1</div>
                     <h3>Discovery & Assessment</h3>
-                    <p>We explore your career history, skills, values, and aspirations to define your encore career vision.</p>
+                    <p>Comprehensive evaluation of your skills, values, impact goals, and transition readiness</p>
                 </div>
                 <div class="step">
                     <div class="step-number">2</div>
-                    <h3>Strategy Development</h3>
-                    <p>We create a customized transition plan targeting fractional roles, board positions, or portfolio careers.</p>
+                    <h3>Strategic Pathway Planning</h3>
+                    <p>Identify and evaluate optimal encore career pathways matching your criteria and market opportunities</p>
                 </div>
                 <div class="step">
                     <div class="step-number">3</div>
-                    <h3>Positioning & Packaging</h3>
-                    <p>We refine your personal brand, narrative, and materials for the encore career marketplace.</p>
+                    <h3>Preparation</h3>
+                    <p>Develop tools, messaging, positioning, and connections needed for successful transition</p>
                 </div>
                 <div class="step">
                     <div class="step-number">4</div>
-                    <h3>Connection & Placement</h3>
-                    <p>We leverage targeted networks and introductions to connect you with relevant opportunities.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">5</div>
-                    <h3>Transition & Integration</h3>
-                    <p>We support your successful transition into new roles and help you establish a sustainable encore career.</p>
+                    <h3>Launch & Integration</h3>
+                    <p>Support your transition into fulfilling encore career with ongoing services and network access</p>
                 </div>
             </div>
         </div>
@@ -1401,34 +1434,61 @@
     <section id="book" class="book-section">
         <div class="container">
             <div class="section-title">
-                <h2>The Encore Executive Book</h2>
+                <h2>The Encore Executive: Redefining Leadership Transitions</h2>
+                <p>Expert Guidance for C-Suite Leaders Navigating Retirement, Unretirement, and Part-Time Roles</p>
             </div>
             <div class="book-container">
                 <div class="book-image">
-                    <div class="book-cover">
-                        Book Cover: "The Encore Executive"<br>by Kendra Weinisch
-                    </div>
+                    <img src="public/images/book-cover.png" alt="The Encore Executive Book Cover" class="book-cover-img">
+                   
                 </div>
                 <div class="book-content">
-                    <p class="intro">In this groundbreaking book, Kendra Weinisch provides a roadmap for C-suite executives navigating the transition from traditional corporate leadership to meaningful encore careers.</p>
+                    <p class="intro">A comprehensive guide for accomplished C-suite leaders transitioning from traditional corporate roles to meaningful encore careers, board positions, and fractional work.</p>
                     
                     <div class="learn-list">
-                        <h3>Learn How To:</h3>
+                        <h3>Master Your Transition:</h3>
                         <ul>
-                            <li>Redefine retirement for the modern executive</li>
-                            <li>Design a portfolio career that combines income, impact, and flexibility</li>
-                            <li>Position yourself for fractional C-suite roles</li>
-                            <li>Secure meaningful board positions</li>
-                            <li>Navigate the emotional journey of identity transition</li>
-                            <li>Build a legacy beyond your corporate career</li>
-                            <li>Create sustainable work-life integration in your encore years</li>
+                            <li>Translate C-suite experience into board, advisory, and fractional roles</li>
+                            <li>Navigate the emotional journey from corporate identity to purpose-driven work</li>
+                            <li>Build sustainable portfolio careers combining impact and income</li>
+                            <li>Position yourself for part-time C-suite opportunities and board seats</li>
+                            <li>Create financial models supporting meaningful encore careers</li>
+                            <li>Develop compelling personal brands beyond corporate titles</li>
                         </ul>
                     </div>
                     
                     <div class="cta-box">
-                        <p>Be the first to know when "The Encore Executive" is available!</p>
-                        <a href="#" class="btn" id="book-notification-button">Get Book Updates</a>
+                        <p><strong>Join the Waitlist</strong> - Be first to access exclusive content and launch discounts</p>
+                        <a href="#" class="btn" id="notify-me">Notify Me at Launch</a>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Transition FAQ</h2>
+                <p>Common questions about encore careers, fractional roles, and board placement for C-suite leaders</p>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>What is an encore career for leaders?</h3>
+                    <p>An encore career represents a purposeful transition where accomplished leaders leverage their experience in new ways - through fractional roles, board positions, advisory work, or mission-driven ventures that combine income with impact and personal fulfillment.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How long does transition typically take?</h3>
+                    <p>Most C-suite transitions require 6-12 months for meaningful repositioning. The Fractional Launch program accelerates this to 4-8 weeks, while board placement typically spans 4-9 months depending on target roles and preparation level.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What's the difference between fractional and part-time roles?</h3>
+                    <p>Fractional leaders typically serve multiple organizations simultaneously with project-based leadership, while part-time roles involve dedicated hours to a single organization. Both offer flexibility but require different positioning and client management approaches.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do I need specific certifications for board positions?</h3>
+                    <p>While not always required, certifications like NACD Directorship Certification significantly enhance credibility and competitiveness for corporate board roles. Our Board-Ready Accelerator includes preparation for these certifications.</p>
                 </div>
             </div>
         </div>
@@ -1441,75 +1501,30 @@
                 <h2>Navigating the Emotional Journey</h2>
             </div>
             <div class="emotional-content">
-                <h3>The Identity Transition</h3>
-                <p>Moving from a defined corporate role to an encore career involves significant psychological shifts. Many executives struggle with:</p>
-                <p><strong>Loss of Status and Identity:</strong> After decades being known as "the CEO" or "the CMO," transitioning away from that identity can feel disorienting and unsettling.</p>
-                <p><strong>Uncertainty and Ambiguity:</strong> The clear metrics of corporate success (revenue growth, market share, stock performance) give way to more personal measures of fulfillment and impact.</p>
-                <p><strong>Social Network Changes:</strong> Colleagues, professional networks, and even social circles often revolve around your corporate role and can shift dramatically during transition.</p>
+                <h3>Identity Beyond the Corner Office</h3>
+                <p>Transitioning from high-powered corporate roles to encore careers involves more than professional change—it's an identity transformation. Many leaders struggle with the loss of status, routine, and professional identity that defined them for decades. CareerNinja provides the framework to rebuild identity around purpose rather than position.</p>
                 
-                <h3>The CareerNinja Approach</h3>
-                <p>Our coaching addresses these emotional dimensions directly, helping executives:</p>
-                <p><strong>Craft a New Narrative:</strong> We help you reframe your identity from "former executive" to "experienced leader with valuable perspective and continued capacity for impact."</p>
-                <p><strong>Develop Psychological Flexibility:</strong> We build your capacity to thrive in less structured environments and embrace multiple roles simultaneously.</p>
-                <p><strong>Create Meaningful Connections:</strong> We help you build new networks aligned with your encore career goals and values.</p>
-                <p>This emotional work is as critical to successful transition as the practical career strategy components.</p>
+                <h3>Bridging the Purpose Gap</h3>
+                <p>After achieving traditional success metrics, leaders often confront the "purpose gap"—the space between what they're accomplished at and what gives them meaning. Our services bridge this gap by aligning proven skills with personal values and market opportunities for sustainable impact.</p>
+                
+                <h3>From Achievement to Fulfillment</h3>
+                <p>We help leaders shift from measuring success by achievements and titles to finding fulfillment through impact, purpose, and personal growth. This mental transition is crucial for successful encore career integration and long-term satisfaction.</p>
             </div>
         </div>
     </section>
 
-    <!-- Coaching Standards Section -->
+    <!-- Standards Section -->
     <section class="coaching-standards">
         <div class="container">
             <div class="section-title">
-                <h2>Why Coaching Standards Matter</h2>
+                <h2>Why Professional Standards Matter</h2>
             </div>
             <div class="standards-content">
-                <p>As an executive considering career transition coaching, you deserve to work with a professional who adheres to the highest standards of practice and ethics.</p>
-                <p>CareerNinja follows the rigorous standards set by the <a href="https://www.coachfederation.org/" target="_blank" rel="noopener">International Coaching Federation (ICF)</a>, the global leader in coaching credentialing and ethics.</p>
-                <p>This means you can expect:</p>
-                <ul>
-                    <li>Strict confidentiality regarding all client information</li>
-                    <li>Clear agreements about coaching process, fees, and expectations</li>
-                    <li>Professional boundaries that maintain appropriate relationships</li>
-                    <li>Ongoing professional development to ensure current, effective practices</li>
-                    <li>Adherence to the ICF Code of Ethics in all client interactions</li>
-                </ul>
-                <p>When investing in your encore career transition, choose a coach who demonstrates commitment to professional excellence and ethical practice.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section id="faq" class="faq-section">
-        <div class="container">
-            <div class="section-title">
-                <h2>Frequently Asked Questions</h2>
-            </div>
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <h3>How is encore career coaching different from executive coaching?</h3>
-                    <p>Encore career coaching specifically addresses the unique challenges of transitioning from full-time corporate leadership to fractional roles, board positions, or portfolio careers. While executive coaching typically focuses on performance within a current role, encore career coaching helps you design and implement your next chapter beyond traditional corporate structures.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>What types of executives benefit most from CareerNinja services?</h3>
-                    <p>Our services are designed for C-suite and senior executives (typically ages 50-70) who are considering or actively planning a transition from full-time corporate leadership. This includes executives exploring fractional roles, board service, entrepreneurship, nonprofit leadership, or portfolio careers that combine multiple interests and income streams.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>How long does a typical executive transition take?</h3>
-                    <p>The timeline varies based on your goals, but most executives complete a meaningful transition in 6-18 months. Fractional roles and consulting engagements often materialize more quickly (3-9 months), while board positions typically require a longer runway (9-18 months). Our coaching is designed to accelerate this process through focused strategy and targeted connections.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Do you guarantee board placements or fractional role opportunities?</h3>
-                    <p>While we cannot guarantee specific outcomes, our Board Placement Program and Executive Encore Blueprint include direct introductions to relevant opportunities through our extensive network. We focus on positioning you effectively and connecting you with decision-makers, significantly increasing your chances of securing meaningful roles.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>What is your approach to pricing fractional roles?</h3>
-                    <p>We help executives develop appropriate pricing strategies based on the scope of work, time commitment, value delivered, and market rates. This often involves moving from annual salary thinking to project-based, retainer, or hourly pricing models. We provide specific frameworks and negotiation support to ensure you're compensated fairly for your expertise.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Can I combine multiple services?</h3>
-                    <p>Absolutely. Many executives begin with a Strategy Session, then progress to à la carte coaching for specific challenges, and eventually enroll in more comprehensive programs. We can create customized service packages that address your unique transition needs and timeline.</p>
-                </div>
+                <p>As a leader considering career transition services, you deserve professionals adhering to the highest ethical and professional standards. CareerNinja maintains ICF certification and follows rigorous confidentiality protocols for C-suite clients.</p>
+                
+                <p>We follow the <a href="https://www.icf-credentialing.org/ethics/code-of-ethics" target="_blank" rel="noopener noreferrer">International Coaching Federation (ICF) Code of Ethics</a> and maintain strict confidentiality regarding all client information, recognizing the sensitive nature of transitions.</p>
+                
+                <p>Our commitment to excellence means transparent pricing, clear expectations, measurable outcomes, and enterprise-grade security for every engagement.</p>
             </div>
         </div>
     </section>
@@ -1517,9 +1532,9 @@
     <!-- CTA Section -->
     <section class="cta">
         <div class="container">
-            <h2>Ready to Design Your Encore Career?</h2>
-            <p>Schedule your complimentary Executive Encore Strategy Session today.</p>
-            <a href="#" class="btn" id="final-cta-button">Book Your Session Now</a>
+            <h2>Ready to Launch Your Encore Career?</h2>
+            <p>Schedule your complimentary Encore Strategy Session with CareerNinja today</p>
+            <a href="#" class="btn" id="final-cta">Schedule Session</a>
         </div>
     </section>
 
@@ -1528,150 +1543,175 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>CareerNinja</h3>
-                    <p>Executive encore career services and C-suite transition coaching for fractional roles, board positions, and purpose-driven work.</p>
+                    <h3>CareerNinja Services</h3>
+                    <p>Helping C-suite leaders transition to meaningful encore careers, board positions, and fractional roles with purpose-driven impact.</p>
                     <div class="social-links">
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/careerninja" aria-label="Visit CareerNinja LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
                     </div>
                 </div>
                 <div class="footer-column">
                     <h3>Services</h3>
                     <ul>
-                        <li><a href="#services">Executive Encore Strategy Session</a></li>
-                        <li><a href="#services">Executive Career Coaching</a></li>
-                        <li><a href="#services">Executive Encore Blueprint</a></li>
-                        <li><a href="#services">Board Placement Program</a></li>
+                        <li><a href="#services">Encore Strategy Session</a></li>
+                        <li><a href="#services">Career Services</a></li>
+                        <li><a href="#services">Fractional Launch</a></li>
+                        <li><a href="#services">Board-Ready Accelerator</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h3>Resources</h3>
                     <ul>
-                        <li><a href="#book">The Encore Executive Book</a></li>
-                        <li><a href="#process">Transition Process</a></li>
+                        <li><a href="#problem">Transition Challenges</a></li>
+                        <li><a href="#process">Our Process</a></li>
+                        <li><a href="#book">Encore Executive Book</a></li>
                         <li><a href="#faq">FAQ</a></li>
-                        <li><a href="#">Executive Insights Blog</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Contact</h3>
-                    <ul>
-                        <li><a href="mailto:info@yourcareerninja.com">info@yourcareerninja.com</a></li>
-                        <li><a href="tel:+1-XXX-XXX-XXXX">+1 (XXX) XXX-XXXX</a></li>
-                        <li><a href="#" id="footer-contact-link">Schedule Consultation</a></li>
+                        <li><a href="#" id="footer-contact-link">Contact</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2023 CareerNinja. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+                <p>&copy; <span id="current-year"></span> CareerNinja. All rights reserved. | Encore Career Services</p>
             </div>
         </div>
     </footer>
 
-    <!-- Contact Modal -->
-    <div class="modal" id="contact-modal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
+    <!-- Strategy Session Modal -->
+    <div class="modal" id="strategy-session-modal" role="dialog" aria-labelledby="strategy-modal-title" aria-hidden="true">
         <div class="modal-content">
-            <button class="close-modal" aria-label="Close contact form">&times;</button>
-            <h2 id="modal-title">Schedule Your Executive Strategy Session</h2>
+            <button class="close-modal" aria-label="Close strategy session form">&times;</button>
+            <h2 id="strategy-modal-title">Schedule Your Encore Strategy Session</h2>
+            <p>Please provide your availability for a 15-minute complimentary session. We'll confirm your appointment via email.</p>
             
-            <div class="calendly-info">
-                <i class="fas fa-calendar-alt"></i>
-                <p>Select your preferred date and time for a 15-minute complimentary Executive Encore Strategy Session.</p>
-            </div>
-            
-            <form id="contact-form" action="process_form.php" method="POST" class="contact-form">
-                <div class="form-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
+            <div class="contact-form">
+                <form id="strategy-session-form">
+                    <div class="form-group">
+                        <label for="strategy-name">Full Name</label>
+                        <input type="text" id="strategy-name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="strategy-email">Email Address</label>
+                        <input type="email" id="strategy-email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="strategy-phone">Phone Number (Optional)</label>
+                        <input type="tel" id="strategy-phone" name="phone">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Preferred Meeting Times (Please provide 3 options):</label>
+                        
+                        <div class="datetime-input">
+                            <input type="datetime-local" id="meeting-time-1" name="meeting_time_1" required>
+                        </div>
+                        <div class="datetime-input">
+                            <input type="datetime-local" id="meeting-time-2" name="meeting_time_2" required>
+                        </div>
+                        <div class="datetime-input">
+                            <input type="datetime-local" id="meeting-time-3" name="meeting_time_3" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="strategy-goals">What are your main goals for your encore career? (Optional)</label>
+                        <textarea id="strategy-goals" name="goals" placeholder="Briefly describe what you hope to achieve..."></textarea>
+                    </div>
+                    
+                    <div class="form-submit">
+                        <button type="submit" class="btn">Submit Availability</button>
+                    </div>
+                </form>
                 
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" required>
+                <div class="success-message" id="strategy-success-message">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Availability Submitted!</h3>
+                    <p>Thank you for providing your preferred meeting times. We'll contact you shortly to confirm your Encore Strategy Session.</p>
                 </div>
-                
-                <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone">
-                </div>
-                
-                <div class="form-group">
-                    <label for="current-role">Current/Most Recent Role</label>
-                    <input type="text" id="current-role" name="current_role" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="service">Service of Interest</label>
-                    <select id="service" name="service" required>
-                        <option value="">Select a service</option>
-                        <option value="Strategy Session">Executive Encore Strategy Session</option>
-                        <option value="Executive Coaching">Executive Career Coaching</option>
-                        <option value="Encore Blueprint">Executive Encore Blueprint</option>
-                        <option value="Board Placement">Board Placement Program</option>
-                    </select>
-                </div>
-                
-                <div class="form-group">
-                    <label for="message">What would you like to discuss? (Optional)</label>
-                    <textarea id="message" name="message" placeholder="Briefly describe your current situation and goals..."></textarea>
-                </div>
-                
-                <div class="form-submit">
-                    <button type="submit" class="btn">Schedule Session</button>
-                </div>
-            </form>
-            
-            <div class="success-message" id="success-message">
-                <i class="fas fa-check-circle"></i>
-                <h3>Thank You!</h3>
-                <p>Your request has been submitted successfully. We'll contact you within 24 hours to confirm your session details.</p>
             </div>
         </div>
     </div>
 
-    <!-- Book Notification Modal -->
-    <div class="modal" id="book-modal" role="dialog" aria-labelledby="book-modal-title" aria-hidden="true">
+    <!-- Contact Modal -->
+    <div class="modal" id="contact-modal" role="dialog" aria-labelledby="contact-modal-title" aria-hidden="true">
         <div class="modal-content">
-            <button class="close-modal" aria-label="Close book notification form">&times;</button>
-            <h2 id="book-modal-title">Get "The Encore Executive" Book Updates</h2>
+            <button class="close-modal" aria-label="Close contact form">&times;</button>
+            <h2 id="contact-modal-title">Contact CareerNinja</h2>
+            <p>Complete the form below and we'll respond within 24 hours.</p>
             
-            <form id="book-form" action="process_book.php" method="POST" class="contact-form">
-                <div class="form-group">
-                    <label for="book-name">Full Name</label>
-                    <input type="text" id="book-name" name="name" required>
-                </div>
+            <div class="contact-form">
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number (Optional)</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Service of Interest</label>
+                        <select id="service" name="service">
+                            <option value="">Select a service</option>
+                            <option value="Strategy Session">Encore Strategy Session</option>
+                            <option value="Career Coaching">Career Services</option>
+                            <option value="Fractional Executive">Fractional Launch</option>
+                            <option value="Board Accelerator">Board-Ready Accelerator</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <div class="form-submit">
+                        <button type="submit" class="btn">Send Message</button>
+                    </div>
+                </form>
                 
-                <div class="form-group">
-                    <label for="book-email">Email Address</label>
-                    <input type="email" id="book-email" name="email" required>
+                <div class="success-message" id="success-message">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Message Sent Successfully!</h3>
+                    <p>Thank you for contacting CareerNinja. We'll respond to your message within 24 hours.</p>
                 </div>
-                
-                <div class="form-group">
-                    <label for="book-role">Current/Most Recent Role</label>
-                    <input type="text" id="book-role" name="current_role">
-                </div>
-                
-                <div class="form-group">
-                    <label for="book-interests">What aspects of encore career transition interest you most?</label>
-                    <textarea id="book-interests" name="interests" placeholder="Fractional roles, board positions, portfolio careers, identity transition, etc."></textarea>
-                </div>
-                
-                <div class="form-submit">
-                    <button type="submit" class="btn">Get Book Updates</button>
-                </div>
-            </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notify Me Modal -->
+    <div class="modal" id="notify-modal" role="dialog" aria-labelledby="notify-modal-title" aria-hidden="true">
+        <div class="modal-content">
+            <button class="close-modal" aria-label="Close notification form">&times;</button>
+            <h2 id="notify-modal-title">Notify Me When The Encore Executive Launches</h2>
+            <p>Enter your email below to be the first to know when "The Encore Executive" is available and receive exclusive content.</p>
             
-            <div class="success-message" id="book-success-message">
-                <i class="fas fa-check-circle"></i>
-                <h3>Thank You!</h3>
-                <p>You've been added to our book notification list. We'll keep you updated on "The Encore Executive" publication timeline.</p>
+            <div class="contact-form">
+                <form id="notify-form">
+                    <div class="form-group">
+                        <label for="notify-email">Email Address</label>
+                        <input type="email" id="notify-email" name="email" required>
+                    </div>
+                    <div class="form-submit">
+                        <button type="submit" class="btn">Notify Me at Launch</button>
+                    </div>
+                </form>
+                
+                <div class="success-message" id="notify-success-message">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>You're on the List!</h3>
+                    <p>We'll notify you as soon as "The Encore Executive" is available with exclusive content for C-suite leaders.</p>
+                </div>
             </div>
         </div>
     </div>
 
     <script>
-        // Mobile Menu Toggle
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Mobile menu toggle
         const mobileMenu = document.getElementById('mobile-menu');
         const nav = document.getElementById('nav');
         
@@ -1692,36 +1732,38 @@
         
         // Modal functionality
         const contactModal = document.getElementById('contact-modal');
-        const bookModal = document.getElementById('book-modal');
+        const notifyModal = document.getElementById('notify-modal');
+        const strategyModal = document.getElementById('strategy-session-modal');
+        const contactLinks = document.querySelectorAll('#contact-link, #footer-contact-link');
+        const notifyLink = document.getElementById('notify-me');
+        const strategyButtons = document.querySelectorAll('#strategy-session-button, #final-cta, .encore-strategy-button');
         const closeButtons = document.querySelectorAll('.close-modal');
-        const contactLinks = document.querySelectorAll('#contact-link, #footer-contact-link, #strategy-session-button, #final-cta-button');
-        const serviceButtons = document.querySelectorAll('.service-cta .btn');
-        const bookButton = document.getElementById('book-notification-button');
+        
+        // Open strategy session modal
+        strategyButtons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                strategyModal.style.display = 'flex';
+                strategyModal.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+            });
+        });
         
         // Open contact modal
         contactLinks.forEach(link => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
                 contactModal.style.display = 'flex';
+                contactModal.setAttribute('aria-hidden', 'false');
                 document.body.style.overflow = 'hidden';
             });
         });
         
-        // Open contact modal with service pre-selected
-        serviceButtons.forEach(button => {
-            button.addEventListener('click', function(e) {
-                e.preventDefault();
-                const service = this.getAttribute('data-service');
-                document.getElementById('service').value = service;
-                contactModal.style.display = 'flex';
-                document.body.style.overflow = 'hidden';
-            });
-        });
-        
-        // Open book modal
-        bookButton.addEventListener('click', function(e) {
+        // Open notify modal
+        notifyLink.addEventListener('click', function(e) {
             e.preventDefault();
-            bookModal.style.display = 'flex';
+            notifyModal.style.display = 'flex';
+            notifyModal.setAttribute('aria-hidden', 'false');
             document.body.style.overflow = 'hidden';
         });
         
@@ -1729,7 +1771,11 @@
         closeButtons.forEach(button => {
             button.addEventListener('click', function() {
                 contactModal.style.display = 'none';
-                bookModal.style.display = 'none';
+                notifyModal.style.display = 'none';
+                strategyModal.style.display = 'none';
+                contactModal.setAttribute('aria-hidden', 'true');
+                notifyModal.setAttribute('aria-hidden', 'true');
+                strategyModal.setAttribute('aria-hidden', 'true');
                 document.body.style.overflow = 'auto';
             });
         });
@@ -1738,63 +1784,150 @@
         window.addEventListener('click', function(e) {
             if (e.target === contactModal) {
                 contactModal.style.display = 'none';
+                contactModal.setAttribute('aria-hidden', 'true');
                 document.body.style.overflow = 'auto';
             }
-            if (e.target === bookModal) {
-                bookModal.style.display = 'none';
+            if (e.target === notifyModal) {
+                notifyModal.style.display = 'none';
+                notifyModal.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = 'auto';
+            }
+            if (e.target === strategyModal) {
+                strategyModal.style.display = 'none';
+                strategyModal.setAttribute('aria-hidden', 'true');
                 document.body.style.overflow = 'auto';
             }
         });
         
-        // Form submission handling
-        const contactForm = document.getElementById('contact-form');
-        const bookForm = document.getElementById('book-form');
+        // Strategy session form submission
+        const strategyForm = document.getElementById('strategy-session-form');
         
-        contactForm.addEventListener('submit', function(e) {
+        strategyForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // In a real implementation, this would send the form data to your PHP script
-            // For demonstration, we'll just show the success message
-            contactForm.style.display = 'none';
-            document.getElementById('success-message').style.display = 'block';
+            // Get form data
+            const formData = new FormData(strategyForm);
+            const data = {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                phone: formData.get('phone'),
+                meeting_time_1: formData.get('meeting_time_1'),
+                meeting_time_2: formData.get('meeting_time_2'),
+                meeting_time_3: formData.get('meeting_time_3'),
+                goals: formData.get('goals')
+            };
             
-            // Reset form after 3 seconds (in a real implementation, you'd do this after successful submission)
-            setTimeout(() => {
-                contactForm.reset();
-                contactForm.style.display = 'block';
-                document.getElementById('success-message').style.display = 'none';
-                contactModal.style.display = 'none';
+            // In a real implementation, you would send this data to your server/email
+            console.log('Strategy session form submitted:', data);
+            
+            // Show success message
+            document.getElementById('strategy-success-message').style.display = 'block';
+            strategyForm.style.display = 'none';
+            
+            // Reset form after 3 seconds and close modal
+            setTimeout(function() {
+                strategyForm.reset();
+                document.getElementById('strategy-success-message').style.display = 'none';
+                strategyForm.style.display = 'block';
+                strategyModal.style.display = 'none';
+                strategyModal.setAttribute('aria-hidden', 'true');
                 document.body.style.overflow = 'auto';
             }, 3000);
         });
         
-        bookForm.addEventListener('submit', function(e) {
+        // Contact form submission - UPDATED WITH MAILTO FUNCTIONALITY
+        const contactForm = document.getElementById('contact-form');
+        
+        contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // In a real implementation, this would send the form data to your PHP script
-            // For demonstration, we'll just show the success message
-            bookForm.style.display = 'none';
-            document.getElementById('book-success-message').style.display = 'block';
+            // Get form data
+            const formData = new FormData(contactForm);
+            const data = {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                phone: formData.get('phone'),
+                service: formData.get('service'),
+                message: formData.get('message')
+            };
             
-            // Reset form after 3 seconds (in a real implementation, you'd do this after successful submission)
-            setTimeout(() => {
-                bookForm.reset();
-                bookForm.style.display = 'block';
-                document.getElementById('book-success-message').style.display = 'none';
-                bookModal.style.display = 'none';
+            // Validate form
+            if (!data.name || !data.email || !data.message) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            // Create email content
+            const subject = `CareerNinja Contact: ${data.service || 'General Inquiry'}`;
+            const body = `
+Name: ${data.name}
+Email: ${data.email}
+Phone: ${data.phone || 'Not provided'}
+Service: ${data.service || 'Not specified'}
+
+Message:
+${data.message}
+            `.trim();
+            
+            // Create mailto link
+            const mailtoLink = `mailto:kendraweinisch@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            
+            // Open email client
+            window.location.href = mailtoLink;
+            
+            // Show success message
+            document.getElementById('success-message').style.display = 'block';
+            contactForm.style.display = 'none';
+            
+            // Reset form after 5 seconds and close modal
+            setTimeout(function() {
+                contactForm.reset();
+                document.getElementById('success-message').style.display = 'none';
+                contactForm.style.display = 'block';
+                contactModal.style.display = 'none';
+                contactModal.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = 'auto';
+            }, 5000);
+        });
+        
+        // Notify form submission
+        const notifyForm = document.getElementById('notify-form');
+        
+        notifyForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(notifyForm);
+            const email = formData.get('email');
+            
+            // In a real implementation, you would send this data to your server
+            console.log('Notify form submitted:', email);
+            
+            // Show success message
+            document.getElementById('notify-success-message').style.display = 'block';
+            notifyForm.style.display = 'none';
+            
+            // Reset form after 3 seconds and close modal
+            setTimeout(function() {
+                notifyForm.reset();
+                document.getElementById('notify-success-message').style.display = 'none';
+                notifyForm.style.display = 'block';
+                notifyModal.style.display = 'none';
+                notifyModal.setAttribute('aria-hidden', 'true');
                 document.body.style.overflow = 'auto';
             }, 3000);
         });
         
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') === '#') return;
+                
                 e.preventDefault();
                 
                 const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
                 const targetElement = document.querySelector(targetId);
+                
                 if (targetElement) {
                     window.scrollTo({
                         top: targetElement.offsetTop - 100,
@@ -1803,35 +1936,6 @@
                 }
             });
         });
-        
-        // Add focus trap for modals
-        function trapFocus(element) {
-            const focusableElements = element.querySelectorAll(
-                'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-            );
-            const firstElement = focusableElements[0];
-            const lastElement = focusableElements[focusableElements.length - 1];
-            
-            element.addEventListener('keydown', function(e) {
-                if (e.key === 'Tab') {
-                    if (e.shiftKey) {
-                        if (document.activeElement === firstElement) {
-                            e.preventDefault();
-                            lastElement.focus();
-                        }
-                    } else {
-                        if (document.activeElement === lastElement) {
-                            e.preventDefault();
-                            firstElement.focus();
-                        }
-                    }
-                }
-            });
-        }
-        
-        // Initialize focus traps for modals
-        trapFocus(contactModal);
-        trapFocus(bookModal);
     </script>
 </body>
 </html>
