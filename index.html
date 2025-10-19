@@ -982,7 +982,7 @@
             background-color: white;
             padding: 3rem;
             border-radius: 8px;
-            max-width: 800px;
+            max-width: 500px;
             width: 100%;
             max-height: 90vh;
             overflow-y: auto;
@@ -1080,6 +1080,37 @@
             font-size: 3rem;
             color: var(--success);
             margin-bottom: 1rem;
+        }
+        
+        /* Required field indicator */
+        .required {
+            color: var(--error);
+        }
+        
+        /* Loading state for buttons */
+        .btn.loading {
+            position: relative;
+            color: transparent;
+        }
+        
+        .btn.loading::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: 50%;
+            left: 50%;
+            margin-left: -10px;
+            margin-top: -10px;
+            border: 2px solid #ffffff;
+            border-radius: 50%;
+            border-right-color: transparent;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
         }
         
         /* Responsive */
@@ -1580,51 +1611,36 @@
         <div class="modal-content">
             <button class="close-modal" aria-label="Close strategy session form">&times;</button>
             <h2 id="strategy-modal-title">Schedule Your Encore Strategy Session</h2>
-            <p>Please provide your availability for a 15-minute complimentary session. We'll confirm your appointment via email.</p>
+            <p>Please provide your contact information and we'll reach out to schedule your complimentary 15-minute session.</p>
             
             <div class="contact-form">
-                <form id="strategy-session-form">
+                <form id="strategy-session-form" action="https://formsubmit.co/kendraweinisch@gmail.com" method="POST">
+                    <input type="hidden" name="_subject" value="CareerNinja - Strategy Session Request">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_next" value="https://yourcareerninja.com/thank-you.html">
+                    
                     <div class="form-group">
                         <label for="strategy-name">Full Name</label>
-                        <input type="text" id="strategy-name" name="name" required>
+                        <input type="text" id="strategy-name" name="name">
                     </div>
                     <div class="form-group">
-                        <label for="strategy-email">Email Address</label>
+                        <label for="strategy-email">Email Address <span class="required">*</span></label>
                         <input type="email" id="strategy-email" name="email" required>
                     </div>
                     <div class="form-group">
-                        <label for="strategy-phone">Phone Number (Optional)</label>
+                        <label for="strategy-phone">Phone Number</label>
                         <input type="tel" id="strategy-phone" name="phone">
                     </div>
                     
-                    <div class="form-group">
-                        <label>Preferred Meeting Times (Please provide 3 options):</label>
-                        
-                        <div class="datetime-input">
-                            <input type="datetime-local" id="meeting-time-1" name="meeting_time_1" required>
-                        </div>
-                        <div class="datetime-input">
-                            <input type="datetime-local" id="meeting-time-2" name="meeting_time_2" required>
-                        </div>
-                        <div class="datetime-input">
-                            <input type="datetime-local" id="meeting-time-3" name="meeting_time_3" required>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="strategy-goals">What are your main goals for your encore career? (Optional)</label>
-                        <textarea id="strategy-goals" name="goals" placeholder="Briefly describe what you hope to achieve..."></textarea>
-                    </div>
-                    
                     <div class="form-submit">
-                        <button type="submit" class="btn">Submit Availability</button>
+                        <button type="submit" class="btn">Submit</button>
                     </div>
                 </form>
                 
                 <div class="success-message" id="strategy-success-message">
                     <i class="fas fa-check-circle"></i>
-                    <h3>Availability Submitted!</h3>
-                    <p>Thank you for providing your preferred meeting times. We'll contact you shortly to confirm your Encore Strategy Session.</p>
+                    <h3>Thank You!</h3>
+                    <p>We'll contact you shortly to schedule your Encore Strategy Session.</p>
                 </div>
             </div>
         </div>
@@ -1638,34 +1654,24 @@
             <p>Complete the form below and we'll respond within 24 hours.</p>
             
             <div class="contact-form">
-                <form id="contact-form">
+                <form id="contact-form" action="https://formsubmit.co/kendraweinisch@gmail.com" method="POST">
+                    <input type="hidden" name="_subject" value="CareerNinja - General Contact">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_next" value="https://yourcareerninja.com/thank-you.html">
+                    
                     <div class="form-group">
-                        <label for="name">Full Name *</label>
-                        <input type="text" id="name" name="name" required>
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name">
                     </div>
                     <div class="form-group">
-                        <label for="email">Email Address *</label>
+                        <label for="email">Email Address <span class="required">*</span></label>
                         <input type="email" id="email" name="email" required>
                     </div>
                     <div class="form-group">
-                        <label for="phone">Phone Number (Optional)</label>
+                        <label for="phone">Phone Number</label>
                         <input type="tel" id="phone" name="phone">
                     </div>
-                    <div class="form-group">
-                        <label for="service">Service of Interest</label>
-                        <select id="service" name="service">
-                            <option value="">Select a service</option>
-                            <option value="Strategy Session">Encore Strategy Session</option>
-                            <option value="Career Coaching">Career Services</option>
-                            <option value="Fractional Executive">Fractional Launch</option>
-                            <option value="Board Accelerator">Board-Ready Accelerator</option>
-                            <option value="Other">Other</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message *</label>
-                        <textarea id="message" name="message" required></textarea>
-                    </div>
+                    
                     <div class="form-submit">
                         <button type="submit" class="btn">Send Message</button>
                     </div>
@@ -1685,14 +1691,27 @@
         <div class="modal-content">
             <button class="close-modal" aria-label="Close notification form">&times;</button>
             <h2 id="notify-modal-title">Notify Me When The Encore Executive Launches</h2>
-            <p>Enter your email below to be the first to know when "The Encore Executive" is available and receive exclusive content.</p>
+            <p>Enter your information below to be the first to know when "The Encore Executive" is available.</p>
             
             <div class="contact-form">
-                <form id="notify-form">
+                <form id="notify-form" action="https://formsubmit.co/kendraweinisch@gmail.com" method="POST">
+                    <input type="hidden" name="_subject" value="CareerNinja - Book Launch Notification">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_next" value="https://yourcareerninja.com/thank-you.html">
+                    
                     <div class="form-group">
-                        <label for="notify-email">Email Address</label>
+                        <label for="notify-name">Full Name</label>
+                        <input type="text" id="notify-name" name="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="notify-email">Email Address <span class="required">*</span></label>
                         <input type="email" id="notify-email" name="email" required>
                     </div>
+                    <div class="form-group">
+                        <label for="notify-phone">Phone Number</label>
+                        <input type="tel" id="notify-phone" name="phone">
+                    </div>
+                    
                     <div class="form-submit">
                         <button type="submit" class="btn">Notify Me at Launch</button>
                     </div>
@@ -1799,124 +1818,51 @@
             }
         });
         
-        // Strategy session form submission
-        const strategyForm = document.getElementById('strategy-session-form');
+        // Form submission handling with FormSubmit.co
+        function setupFormSubmission(formId, successMessageId, modalId) {
+            const form = document.getElementById(formId);
+            const successMessage = document.getElementById(successMessageId);
+            const modal = document.getElementById(modalId);
+            const submitBtn = form.querySelector('button[type="submit"]');
+            
+            form.addEventListener('submit', function(e) {
+                // Client-side validation
+                const email = form.querySelector('input[type="email"]').value;
+                if (!email) {
+                    e.preventDefault();
+                    alert('Please provide your email address.');
+                    return;
+                }
+                
+                // Show loading state
+                submitBtn.classList.add('loading');
+                submitBtn.disabled = true;
+                
+                // FormSubmit.co will handle the actual submission and redirect
+                // We'll show success message after a brief delay to simulate processing
+                setTimeout(function() {
+                    successMessage.style.display = 'block';
+                    form.style.display = 'none';
+                    submitBtn.classList.remove('loading');
+                    submitBtn.disabled = false;
+                    
+                    // Reset form and close modal after 5 seconds
+                    setTimeout(function() {
+                        form.reset();
+                        successMessage.style.display = 'none';
+                        form.style.display = 'block';
+                        modal.style.display = 'none';
+                        modal.setAttribute('aria-hidden', 'true');
+                        document.body.style.overflow = 'auto';
+                    }, 5000);
+                }, 1500);
+            });
+        }
         
-        strategyForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(strategyForm);
-            const data = {
-                name: formData.get('name'),
-                email: formData.get('email'),
-                phone: formData.get('phone'),
-                meeting_time_1: formData.get('meeting_time_1'),
-                meeting_time_2: formData.get('meeting_time_2'),
-                meeting_time_3: formData.get('meeting_time_3'),
-                goals: formData.get('goals')
-            };
-            
-            // In a real implementation, you would send this data to your server/email
-            console.log('Strategy session form submitted:', data);
-            
-            // Show success message
-            document.getElementById('strategy-success-message').style.display = 'block';
-            strategyForm.style.display = 'none';
-            
-            // Reset form after 3 seconds and close modal
-            setTimeout(function() {
-                strategyForm.reset();
-                document.getElementById('strategy-success-message').style.display = 'none';
-                strategyForm.style.display = 'block';
-                strategyModal.style.display = 'none';
-                strategyModal.setAttribute('aria-hidden', 'true');
-                document.body.style.overflow = 'auto';
-            }, 3000);
-        });
-        
-        // Contact form submission - UPDATED WITH MAILTO FUNCTIONALITY
-        const contactForm = document.getElementById('contact-form');
-        
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(contactForm);
-            const data = {
-                name: formData.get('name'),
-                email: formData.get('email'),
-                phone: formData.get('phone'),
-                service: formData.get('service'),
-                message: formData.get('message')
-            };
-            
-            // Validate form
-            if (!data.name || !data.email || !data.message) {
-                alert('Please fill in all required fields.');
-                return;
-            }
-            
-            // Create email content
-            const subject = `CareerNinja Contact: ${data.service || 'General Inquiry'}`;
-            const body = `
-Name: ${data.name}
-Email: ${data.email}
-Phone: ${data.phone || 'Not provided'}
-Service: ${data.service || 'Not specified'}
-
-Message:
-${data.message}
-            `.trim();
-            
-            // Create mailto link
-            const mailtoLink = `mailto:kendraweinisch@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-            
-            // Open email client
-            window.location.href = mailtoLink;
-            
-            // Show success message
-            document.getElementById('success-message').style.display = 'block';
-            contactForm.style.display = 'none';
-            
-            // Reset form after 5 seconds and close modal
-            setTimeout(function() {
-                contactForm.reset();
-                document.getElementById('success-message').style.display = 'none';
-                contactForm.style.display = 'block';
-                contactModal.style.display = 'none';
-                contactModal.setAttribute('aria-hidden', 'true');
-                document.body.style.overflow = 'auto';
-            }, 5000);
-        });
-        
-        // Notify form submission
-        const notifyForm = document.getElementById('notify-form');
-        
-        notifyForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(notifyForm);
-            const email = formData.get('email');
-            
-            // In a real implementation, you would send this data to your server
-            console.log('Notify form submitted:', email);
-            
-            // Show success message
-            document.getElementById('notify-success-message').style.display = 'block';
-            notifyForm.style.display = 'none';
-            
-            // Reset form after 3 seconds and close modal
-            setTimeout(function() {
-                notifyForm.reset();
-                document.getElementById('notify-success-message').style.display = 'none';
-                notifyForm.style.display = 'block';
-                notifyModal.style.display = 'none';
-                notifyModal.setAttribute('aria-hidden', 'true');
-                document.body.style.overflow = 'auto';
-            }, 3000);
-        });
+        // Initialize form submissions
+        setupFormSubmission('strategy-session-form', 'strategy-success-message', 'strategy-session-modal');
+        setupFormSubmission('contact-form', 'success-message', 'contact-modal');
+        setupFormSubmission('notify-form', 'notify-success-message', 'notify-modal');
         
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {

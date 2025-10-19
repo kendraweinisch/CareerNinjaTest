@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Thank You - CareerNinja</title>
+    <meta name="description" content="Thank you for contacting CareerNinja. We'll be in touch soon to discuss your encore career transition.">
+    <meta name="keywords" content="encore career, executive coaching, fractional executive, board positions, career transition">
+    <meta name="author" content="Kendra Weinisch - CareerNinja">
+    <meta name="robots" content="noindex, nofollow">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Thank You - CareerNinja">
+    <meta property="og:description" content="Thank you for contacting CareerNinja. We'll be in touch soon to discuss your encore career transition.">
+    <meta property="og:image" content="https://yourcareerninja.com/public/images/hero-executive.jpg">
+    <meta property="og:url" content="https://yourcareerninja.com/thank-you.html">
+    <meta property="og:site_name" content="CareerNinja">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://yourcareerninja.com/thank-you.html">
+    
+    <!-- Favicon & App Icons -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    
+    <style>
+        :root {
+            --primary: #1a5276;
+            --primary-dark: #0e2e44;
+            --secondary: #e67e22;
+            --secondary-dark: #bf6516;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --success: #27ae60;
+            --error: #e74c3c;
+            --text: #333333;
+            --background: #f9f9f9;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--text);
+            line-height: 1.7;
+            background-color: var(--background);
+            font-size: 18px;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            margin-bottom: 1.2rem;
+            color: var(--dark);
+            line-height: 1.4;
+        }
+        
+        h1 {
+            font-size: 3.2rem;
+        }
+        
+        h2 {
+            font-size: 2.6rem;
+        }
+        
+        h3 {
+            font-size: 2rem;
+        }
+        
+        h4 {
+            font-size: 1.6rem;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Skip link for keyboard users */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--secondary);
+            color: white;
+            padding: 12px;
+            z-index: 10000;
+            text-decoration: none;
+            font-size: 1.1rem;
+            border-radius: 4px;
+        }
+        
+        .skip-link:focus {
+            top: 20px;
+        }
+        
+        /* Focus styles */
+        a:focus,
+        button:focus,
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: 3px solid var(--secondary);
+            outline-offset: 3px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 0;
+        }
+        
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 2rem;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo:focus {
+            outline: 3px solid var(--secondary);
+            outline-offset: 3px;
+            border-radius: 4px;
+        }
+        
+        .logo img {
+            height: 50px;
+            width: 50px;
+            margin-right: 12px;
+            border-radius: 5px;
+        }
+        
+        .logo span {
+            color: var(--secondary);
+        }
+        
+        /* Mobile menu */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            background: transparent;
+            border: 2px solid transparent;
+            border-radius: 4px;
+            padding: 8px;
+        }
+        
+        .menu-toggle:focus {
+            outline: 3px solid var(--secondary);
+            outline-offset: 3px;
+        }
+        
+        .menu-toggle span {
+            height: 4px;
+            width: 100%;
+            background-color: var(--dark);
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 2rem;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            transition: color 0.3s;
+            padding: 8px;
+            border-radius: 4px;
+            font-size: 1.1rem;
+        }
+        
+        nav ul li a:hover,
+        nav ul li a:focus {
+            color: var(--secondary);
+            background-color: rgba(230, 126, 34, 0.1);
+        }
+        
+        /* Main Content */
+        main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10rem 0 6rem;
+        }
+        
+        .thank-you-section {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .thank-you-icon {
+            font-size: 5rem;
+            color: var(--success);
+            margin-bottom: 2rem;
+        }
+        
+        .thank-you-content {
+            background: white;
+            padding: 4rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 3rem;
+        }
+        
+        .thank-you-content h1 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .thank-you-content p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+        
+        .next-steps {
+            background: var(--light);
+            padding: 2.5rem;
+            border-radius: 8px;
+            margin: 2.5rem 0;
+            text-align: left;
+        }
+        
+        .next-steps h3 {
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .next-steps ul {
+            list-style: none;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .next-steps li {
+            margin-bottom: 1.2rem;
+            position: relative;
+            padding-left: 2.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .next-steps li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 24px;
+            height: 24px;
+            background-color: var(--secondary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 16px 36px;
+            background-color: var(--secondary);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid var(--secondary);
+            cursor: pointer;
+            margin: 0.8rem;
+            font-size: 1.2rem;
+        }
+        
+        .btn:hover {
+            background-color: var(--secondary-dark);
+            border-color: var(--secondary-dark);
+        }
+        
+        .btn:focus {
+            outline: 3px solid var(--primary);
+            outline-offset: 3px;
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 4rem 0 1.5rem;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-column {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 2.5rem;
+            padding: 0 1.5rem;
+        }
+        
+        .footer-column h3 {
+            color: white;
+            margin-bottom: 1.8rem;
+            position: relative;
+            padding-bottom: 12px;
+        }
+        
+        .footer-column h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--secondary);
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 1rem;
+        }
+        
+        .footer-column ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+            padding: 4px 6px;
+            border-radius: 3px;
+            font-size: 1.1rem;
+        }
+        
+        .footer-column ul li a:hover,
+        .footer-column ul li a:focus {
+            color: var(--secondary);
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1.2rem;
+            margin-top: 1.5rem;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: white;
+            transition: all 0.3s;
+            text-decoration: none;
+            font-size: 1.3rem;
+        }
+        
+        .social-links a:hover,
+        .social-links a:focus {
+            background: var(--secondary);
+            transform: translateY(-5px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 3rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 1.1rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 1024px) {
+            h1 {
+                font-size: 2.8rem;
+            }
+            
+            h2 {
+                font-size: 2.2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: row;
+            }
+            
+            .menu-toggle {
+                display: flex;
+            }
+            
+            nav {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 80%;
+                height: calc(100vh - 80px);
+                background: white;
+                flex-direction: column;
+                transition: all 0.3s ease;
+                box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+                z-index: 999;
+                padding: 2.5rem;
+            }
+            
+            nav.active {
+                left: 0;
+            }
+            
+            nav ul {
+                flex-direction: column;
+            }
+            
+            nav ul li {
+                margin: 1.5rem 0;
+            }
+            
+            h1 {
+                font-size: 2.4rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            h3 {
+                font-size: 1.7rem;
+            }
+            
+            .thank-you-content {
+                padding: 2.5rem;
+            }
+            
+            .thank-you-content p {
+                font-size: 1.1rem;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+            }
+            
+            body {
+                font-size: 1.1rem;
+            }
+            
+            .btn {
+                padding: 14px 30px;
+                font-size: 1.1rem;
+            }
+            
+            .next-steps {
+                padding: 2rem;
+            }
+            
+            .next-steps li {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip link for keyboard users -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="https://yourcareerninja.com" class="logo" aria-label="CareerNinja Home">
+                <img src="public/images/logo.png" alt="CareerNinja Logo" width="50" height="50">
+                Career<span>Ninja</span>
+            </a>
+            
+            <button class="menu-toggle" id="mobile-menu" aria-label="Open navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <nav id="nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="https://yourcareerninja.com#services">Services</a></li>
+                    <li><a href="https://yourcareerninja.com#process">The Process</a></li>
+                    <li><a href="https://yourcareerninja.com#book">Encore Executive Book</a></li>
+                    <li><a href="https://yourcareerninja.com#faq">FAQ</a></li>
+                    <li><a href="https://yourcareerninja.com#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" tabindex="-1">
+        <div class="container">
+            <section class="thank-you-section">
+                <div class="thank-you-content">
+                    <div class="thank-you-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    
+                    <h1>Thank You for Reaching Out!</h1>
+                    
+                    <p>Your message has been successfully sent to CareerNinja. We appreciate you taking the first step toward transforming your executive success into a meaningful encore career.</p>
+                    
+                    <div class="next-steps">
+                        <h3>What Happens Next</h3>
+                        <ul>
+                            <li><strong>Confirmation Email:</strong> You'll receive a confirmation email within the next few minutes</li>
+                            <li><strong>Personal Response:</strong> Kendra will personally review your inquiry and respond within 24 hours</li>
+                            <li><strong>Strategy Session:</strong> If you requested a strategy session, we'll coordinate scheduling based on your availability</li>
+                            <li><strong>Tailored Guidance:</strong> We'll provide specific recommendations based on your goals and experience</li>
+                        </ul>
+                    </div>
+                    
+                    <p>In the meantime, feel free to explore our resources or learn more about our executive transition services.</p>
+                    
+                    <div class="action-buttons">
+                        <a href="https://yourcareerninja.com" class="btn">Return to Homepage</a>
+                        <a href="https://yourcareerninja.com#services" class="btn btn-outline">Explore Services</a>
+                    </div>
+                </div>
+                
+                <div class="contact-info">
+                    <p><strong>Need immediate assistance?</strong><br>
+                    Email us directly at <a href="mailto:kendraweinisch@gmail.com">kendraweinisch@gmail.com</a></p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>CareerNinja Services</h3>
+                    <p>Helping C-suite leaders transition to meaningful encore careers, board positions, and fractional roles with purpose-driven impact.</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/company/careerninja" aria-label="Visit CareerNinja LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="https://yourcareerninja.com#services">Encore Strategy Session</a></li>
+                        <li><a href="https://yourcareerninja.com#services">Career Services</a></li>
+                        <li><a href="https://yourcareerninja.com#services">Fractional Launch</a></li>
+                        <li><a href="https://yourcareerninja.com#services">Board-Ready Accelerator</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="https://yourcareerninja.com#problem">Transition Challenges</a></li>
+                        <li><a href="https://yourcareerninja.com#process">Our Process</a></li>
+                        <li><a href="https://yourcareerninja.com#book">Encore Executive Book</a></li>
+                        <li><a href="https://yourcareerninja.com#faq">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> CareerNinja. All rights reserved. | Encore Career Services</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Mobile menu toggle
+        const mobileMenu = document.getElementById('mobile-menu');
+        const nav = document.getElementById('nav');
+        
+        mobileMenu.addEventListener('click', function() {
+            nav.classList.toggle('active');
+            const isExpanded = nav.classList.contains('active');
+            mobileMenu.setAttribute('aria-expanded', isExpanded);
+        });
+        
+        // Close mobile menu when clicking on a link
+        const navLinks = document.querySelectorAll('nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('active');
+                mobileMenu.setAttribute('aria-expanded', 'false');
+            });
+        });
+        
+        // Auto-redirect after 15 seconds (optional)
+        setTimeout(function() {
+            window.location.href = 'https://yourcareerninja.com';
+        }, 15000);
+    </script>
+</body>
+</html>
